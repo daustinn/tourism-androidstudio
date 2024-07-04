@@ -20,6 +20,7 @@ android {
         }
     }
 
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -48,7 +49,6 @@ android {
         }
     }
 }
-
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -59,7 +59,24 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.ui.text.google.fonts)
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("io.mockk:mockk:1.12.0")
+    testImplementation("org.mockito:mockito-core:3.12.4")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
+    // testImplementation("androidx.test.ext:junit:1.1.4")
+    // testImplementation("androidx.test.espresso:espresso-core:3.5.0")
+   // testImplementation("androidx.compose.ui:ui-test-junit4:1.2.0")
+
+    // Test rules and transitive dependencies:
+    // testImplementation("androidx.compose.ui:ui-test-junit4:1.9.0")
+    //debugImplementation("androidx.compose.ui:ui-test-manifest:1.9.0")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,5 +84,4 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
 }
